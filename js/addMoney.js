@@ -1,11 +1,15 @@
-document.getElementById("addMoney").addEventListener("click",function(event){
+document.getElementById("addMoney")
+.addEventListener("click",function(event){
    event.preventDefault();
    
    const money = document.getElementById("addMoneyInput").value ;
-   console.log(money);
+  
+   const addMoney = parseFloat(money);
+   
+
    
    const pin = document.getElementById("pinNumberInput").value;
-   console.log(pin );
+   
 
    
    if( pin=== "1234"){
@@ -13,7 +17,6 @@ document.getElementById("addMoney").addEventListener("click",function(event){
        const balance = document.getElementById("accountBalance").innerText;
        
        const addbalance = parseFloat(balance);
-       const addMoney = parseFloat(money);
 
        const newbalance = addbalance + addMoney ;
 
